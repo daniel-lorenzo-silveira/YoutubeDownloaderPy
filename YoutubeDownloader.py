@@ -43,6 +43,6 @@ tkinter.Label(window, textvariable=folder_path).pack(pady=5)
 #Download button with 'Download' function passed as a parameter
 button_download = Button(window,text="Download", command=Download).pack(pady=5)
 
-#Fecha a janela
+#Close Windows
 window.mainloop() 
 
