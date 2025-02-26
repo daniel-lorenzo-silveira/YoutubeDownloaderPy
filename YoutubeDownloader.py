@@ -1,4 +1,3 @@
-
 from tkinter import *
 import tkinter
 from pytubefix import YouTube
@@ -10,7 +9,7 @@ def Download():
   video = YouTube(str(link.get()))
   stream = video.streams.get_highest_resolution()
   stream.download(folder)
-  messagebox.showinfo("Sucesso", "Download concluído com sucesso!")
+  messagebox.showinfo("Success", "Download completed!")
   video = video.streams.get_highest_resolution()
 
 
@@ -36,13 +35,12 @@ link_enter = tkinter.Entry(frame, textvariable=link,width=40)
 link_enter.pack(side=tkinter.LEFT, padx=5)
 
 #Select folder button and shows the selected path
-tkinter.Button(frame, text="Selecionar Pasta", command=select_folder).pack(side=tkinter.RIGHT)
+tkinter.Button(frame, text="Select Folder", command=select_folder).pack(side=tkinter.RIGHT)
 folder_path = tkinter.StringVar()
 tkinter.Label(window, textvariable=folder_path).pack(pady=5)
 
 #Download button with 'Download' function passed as a parameter
 button_download = Button(window,text="Download", command=Download).pack(pady=5)
 
-#Close Window
+#Close window
 window.mainloop() 
-
